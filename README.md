@@ -1,39 +1,36 @@
-<!-- 
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages). 
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages). 
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# Material Theme Builder for Flutter
+Simple Flutter interface for the Material Theme Builder. Check out the original
+builder online at https://material-foundation.github.io/material-theme-builder/.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Create tonal palettes from a single colour
+- Create `ColorScheme` from 3 to 5 colours (primary, secondary, tertiary, error, neutral)
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+1. Add the package to your pubspec.yaml: 
+`flutter pub add material_theme_builder`
 
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+2. Use the package:
 
 ```dart
-const like = 'sample';
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: MaterialThemeBuilder(
+          primary: Colors.blue,
+          secondary: Colors.purple,
+          tertiary: Colors.lightBlue
+        ).toScheme()
+      ),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
+}
 ```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
