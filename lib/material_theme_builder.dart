@@ -59,9 +59,8 @@ class MaterialThemeBuilder {
     );
   }
 
-
   static Map<int, Color> tonalPalette(Color color) {
-    final hct = HctColor.fromInt(color.value);
+    final hct = Hct.fromInt(color.value);
     final palette = TonalPalette.of(hct.hue, hct.chroma).asList;
     var colors = <int, Color>{};
 

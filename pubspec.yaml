@@ -1,11 +1,10 @@
 name: material_theme_builder
 description: Simple Flutter interface for the Material Theme Builder.
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/nathanielxd/material-theme-builder
 
 environment:
   sdk: ">=2.17.1 <3.0.0"
-  flutter: ">=1.17.0"
 
 dependencies:
   flutter:
